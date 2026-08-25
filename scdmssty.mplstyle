@@ -1,0 +1,48 @@
+# Set default figure size
+figure.figsize : 11, 10
+# Set x axis
+xtick.major.size : 15
+xtick.major.width : 2
+xtick.minor.size : 10
+xtick.minor.width : 1
+xtick.direction : in
+xtick.top : False
+xtick.minor.visible : True
+# Set y axis
+ytick.major.size : 15
+ytick.major.width : 2
+ytick.minor.size : 10
+ytick.minor.width : 1
+ytick.direction : in
+ytick.right : False
+ytick.minor.visible : True
+# Fontsizes
+xtick.labelsize : 35
+ytick.labelsize : 35
+xtick.major.pad : 7
+legend.fontsize : 35
+legend.title_fontsize : 35
+axes.titlesize : 35
+axes.labelsize : 35
+xaxis.labellocation: center
+yaxis.labellocation: center
+# Line widths
+axes.linewidth : 2.5
+grid.linewidth : 1
+lines.linewidth : 3
+# Font style
+text.usetex : true
+font.family : sans-serif
+font.sans-serif : Latin Modern
+font.size : 28.0
+# margins
+axes.xmargin : 0.05
+axes.ymargin : 0.05
+axes.formatter.limits: -2, 2
+# Legend
+legend.frameon : False
+# Grid
+grid.linestyle: --
+axes.grid : True
+# Colours
+axes.prop_cycle : cycler('color',['5D3A9D', '161AE6', '1A85FF', '117733', '44AA99', '4f788C', 'DDCC77', 'EFA5BC', 'E66100', 'CC6677', 'AA4499', '882255','0A0A0A'])

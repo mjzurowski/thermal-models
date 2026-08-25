@@ -1,0 +1,150 @@
+### Physical Constants ###
+kb      : 1.38e-23             #Boltzman Constant [J/K]
+hbar    : 1.05e-34             #Plank's Constant over 2 pi [J*s]   
+eVtoJ   : 1.60218e-19          #Conversion factor between Joules and Electron Volts
+
+### Model Constants ###
+TGC     : 0.05                 #Temperature each of the heat capacities and conductances were calculated at
+AGC     : 1.0e-4               #Area each of the heat capacities and conductances were calculated at
+LGC     : 1.0e-2               #Length each of the heat capacities and conductances were calculated at
+
+### Electrical Components ###
+L       : 300.0e-9               #Inductor in Thevenin Equivalent [Henries]
+Rl      : 25e-3                 #Load/Shunt Resistor [Ohms]
+alpha0  : 100.                 #Temperature Sensitivity [Unitless]
+beta0   : 1.                   #Current sensitivity [Unitless]
+Rn      : 0.3                   #normal resistance of the TES [Ohms]
+Ccap    : 5.0e-12              #Capacitor in Thevinin equivalent Circuit [Farads]
+I0_NL   : 1.73165509123e-06    #[Amps], taken from the nonlinear solver at large time after equilibrium had been reached
+electronics_noise : 0.0e-12    # extra electronics noise at a constant level [A/sqrt Hz]
+one_over_f_noise  : 0.0e-12    # one over f noise coefficient 
+one_over_f_gamma  : 0.5        # exponent for one over f noise
+lowpass : 3000000.0              # frequency of low pass filter[Hz]
+lowpasspoles      : 1.0        #number of poles in filter [n/a]
+vb      : 1.0e-6               #Bias voltage
+
+### User Determined Parameters ###
+Tb      : 0.082                 #Bath Temperature [K]
+G_mwb2  : 1.0e-9            #Conductance from Meander to Wirebond 2 [W/K]
+Tc      : 0.087                 #Temperature Half way up the transition [K], NOT AT BIAS.  Number is a guess from Pyle's Thesis
+frac    : 0.3                  #Fraction of normal resistance desired at equilibrium
+
+### Absorber properties###
+
+absorber     : Zn              # Absorber materials
+
+density      : 7.133e06          # Absorber density [g/m^3]
+
+ca_1_05      : 0.0             #Heat Capacity of Absorber, T term [J/K]
+ca_3_05      : 7.7e-10        #Heat Capacity of Absorber, T^3 term [J/K]
+
+### Heat Capacities ###
+### Both T and T^3 terms given at 50mK and 1cm^3 ###
+
+cau1_1_05    : 3.57e-6         #Heat Capacity of Gold Pad 1, T term [J/K]
+cau1_3_05    : 3.03e-10        #Heat Capacity of Gold Pad 1, T^3 term [J/K]
+cg_1_05      : 4.449488298         #Heat Capacity of Glue, T term [J/K]
+cg_3_05      : 22.86551743         #Heat Capacity of Glue, T^3 term [J/K]
+cg_5_05      : 0        #Heat Capacity of Glue, T^5 term [J/K]
+cwb1_1_05    : 3.57e-6         #Heat Capacity of Wirebond 1, T term [J/K]
+cwb1_3_05    : 3.03e-10        #Heat Capacity of Wirebond 1, T^3 term [J/K]
+cau2_1_05    : 3.57e-6         #Heat Capacity of Gold Pad 2, T term [J/K]
+cau2_3_05    : 3.03e-10        #Heat Capacity of Gold Pad 2, T^3 term [J/K]
+csi_1_05     : 0.0             #Heat Capacity of Silicon, T term [J/K]
+csi_3_05     : 8.05e-11        #Heat Capacity of Silicon, T^3 term [J/K]
+cte_1_05     : 3.32e-5         #Heat Capacity of TES Electron System, T term [J/K]
+cte_3_05     : 2.25e-9        #Heat Capacity of TES Electron System, T^3 term [J/K]
+cm_1_05      : 3.57e-6         #Heat Capacity of Meander, T term [J/K]
+cm_3_05      : 3.03e-10        #Heat Capacity of Meander, T^3 term [J/K]
+cwb2_1_05    : 3.57e-6         #Heat Capacity of Wirebond 2, T term [J/K]
+cwb2_3_05    : 3.03e-10        #Heat Capacity of Wirebond 2, T^3 term [J/K]
+
+### Thermal Conductances ###
+### 1cm^2 area and 1cm long, 50mK ###
+
+G_ab_05        : 2.4E-11           #Conductance from Absorber to Bath [W/K] for 6 sapphire balls
+G_aau1_05      : 3.5E-8       #Conductance from Absorber to Gold Pad 1 [W/K]
+G_ag_05        : 3.83e-8       #Conductance from Absorber to Glue [W/K]
+G_gsi_05       : 1.3E-6        #Conductance from Glue to Silicon [W/K]
+G_gb_05        : 0.20e-12        #Conductance from Glue to Bath [W/K]
+G_au1wb1_05    : 1.7E-5       #Conductance from Gold Pad 1 to Wirebond 1 [W/K]
+G_wb1au2_05    : 1.7E-5       #Conductance from Wirebond 1 to Gold Pad 2 [W/K]
+G_siau2_05     : 4.3E-11     #Conductance from Silicon Chip to Gold Pad 2 [W/K]
+G_site_05      : 2.2E-9       #Conductance from TES Phonon System to TES Electron System [W/K]
+G_au2te_05     : 5.9E-9       #Conductance from Gold Pad 2 to TES Electron System [W/K] No Scale
+G_tem_05       : 0.222       #Conductance from TES Electron System to Meander [W/K]
+G_sim_05       : 8.8E-12       #Conductance from Silicon chip to Meander [W/K]
+G_wb2b_05      : 8.7E-6      #Conductance from Wirebond 2 to Bath [W/K]
+G_sib_05       : 0.0
+G_au2m_05       : 8.7E-6     # Conductivity from au2 to meander
+
+### Physical Parameters , Meters and Meters^2 ###
+
+Ab   : 1.0e-4                  #Area of Bath [m^2]
+Lb   : 1.0e-2                  #Length of Bath [m]
+Aa   : 3.2e-4                  #Area of Absorber [m^2]
+La   : 1.775e-2                  #Length of Absorber [m]
+Aau1 : 1.6e-4                 ### #Area of Gold Pad 1[ m^2]
+Lau1 : 400.0e-9                #Length of Gold Pad 1 [m]
+Ag   : 4.0e-5                  #Area of Glue [m^2]
+Lg   : 1.93e-6                  #Length of Glue [m]
+Awb1 : 1.96e-9                 #Area of Wirebond 1 [m^2]
+Lwb1 : 5.0e-3                  #Length of Wirebond 1 [m]
+Aau2 : 7.5e-11                 #Area of Gold Pad 2 [m^2]
+Lau2 : 2.5e-4                  #Length of Gold Pad 2 [m]
+Asi  : 8.0e-6                  #Area of Silicon Wafer [m^2]
+Lsi  : 400.0e-6                #Length of Silicon Wafer [m]
+Ate  : 1.25e-11                 #Area of TES [m^2]
+Lte  : 150.0e-6                  #Length of TES [m]
+Am   : 1.50e-12                 #Area of Meander [m^2]
+Lm   : 0.0432                   #Length of Meander [m]
+Awb2 : 1.96e-9                 #Area of Wirebond 2 [m^2]
+Lwb2 : 5.0e-3                  #Length of Wirebond 2 [m]
+Asib : 1.0e-6                  #Area of silicon wafer-bath connection [m^2]
+Lsib : 2.0e-4                  #Length of silicon wafer-bath connection [m]
+
+Dte : 240e-9                   # Thickness of TES
+Wte : 62.5e-6                   # Width of TES. Thermal conducting direction.
+
+### Exponents for Conductances and Power ###
+
+nab     : 4.                   #Exponent Absorber to Bath [Unitless]
+naau1   : 5.                   #Exponent Absorber to Gold Pad 1 [Unitless]
+nag     : 4.                   #Exponent Absorber to Glue [Unitless] 
+nau1wb1 : 2.                   #Exponent Gold Pad 1 o Wirebond 1 [Unitless]
+ngsi    : 4.                   #Exponent Glue to Silicon Chip [Unitless]
+nwb1au2 : 2.                   #Exponent Wirebond 1 to Gold Pad 2 [Unitless]
+nsiau2  : 5.                   #Exponent Silicon Chip to Gold Pad 2 [Unitless]
+nau2te  : 2.                   #Exponent Gold Pad 2 to TES Electron System [Unitless]
+nsim    : 5.                   #Exponent Silicon chip to Meander [Unitless]
+nsite   : 5.                   #Exponent TES Phonon System to TES Electron System [Unitless]
+ntem    : 2.                   #Exponent TES Electron System to Meander [Unitless]
+nmwb2   : 2.                   #Exponent Meander to Wirebond 2 [Unitless]
+nwb2b   : 2.                   #Exponent Wirebond 2 to Bath [Unitless]
+nsib    : 3.                   #Exponent Silicon Chip to Bath
+ngb     : 4.                   #Exponent Glue to Bath
+nau2m   : 2.                   #Exponent Au2 to Meander
+ntete   : 2.                   #Exponent TES to TES
+
+### Gaussian Parameters ###
+E      : 0.0e-17           #Total Energy input [J]
+Etes    : 0.0e-17           #Total Energy input in TES [J]
+c      : 1.0e-7                #Width of Gaussian
+t0     : 0.00002                 #time that the gaussian should be centered at [s]
+
+### Linear Solver Parameters ###
+lintime   : 0.08               #time you want the solution to be for
+numlinpts : 3277.0             #number of points you want in the linear solution
+
+### ODE Solver Parameters ###
+abserr     : 1.0e-8            #Absolute Error threshold in Solver
+relerr     : 1.0e-7            #Relative Error Threshold in solver
+stoptime   : 0.001            #How long do you want the solution to be for [s]
+numpoints  : 100000.            #How many time points do you want in your solution
+mxstep     : 1.0e+8            #maximum number of steps per integration point
+hmax       : 1.0e-7            #Maximum time step allowed
+
+### log scale parameters ###
+freq_min_exp   : -5.0          #minimum of log scale is at 10^exp
+freq_max_exp   : 7.0           #maximum of log scale is at 10^exp
+log_points     : 1000.         #number of points in the log plot
